@@ -2,14 +2,14 @@ import requests
 from bs4 import BeautifulSoup
 
 
-AI_news = "https://www.artificialintelligence-news.com/"
+AI_news1 = "https://www.artificialintelligence-news.com/"
 
 artical1 = []
 
-response1 = requests.get(AI_news)
-html1 = response1.text
+response1 = requests.get(AI_news1)
+html_response1 = response1.text
 
-soup1 = BeautifulSoup(html1, "html.parser")
+soup1 = BeautifulSoup(html_response1, "html.parser")
 
 container1 = soup1.find_all("div", class_="elementor-loop-container elementor-grid",role="list")
 news1 = container1[3].find_all("div", recursive=False)
