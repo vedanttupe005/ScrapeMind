@@ -1,28 +1,44 @@
 import requests
 from bs4 import BeautifulSoup
 
+AI_MAGAZINE_URL = "https://aimagazine.com"
 
-AI_news2 = "https://aimagazine.com/"
+HEADERS = {
+    "User-Agent": "Mozilla/5.0"
+}
 
-artical2 = []
+def scrape_ai_magazine():
+    articles = []
 
-response2 = requests.get(AI_news2)
-html_response2 = response2.text
+    response = requests.get(AI_MAGAZINE_URL, headers=HEADERS)
+    if response.status_code != 200:
+        return articles
 
-soup2 = BeautifulSoup(html_response2, "html.parser")
+    soup = BeautifulSoup(response.text, "html.parser")
+
+    # Select article cards directly
+    news_cards = soup.select(
+        "div.GridWrapper_flex__1NgfS > div"
+    )
+
+    for card in news_cards[:3]:
+        link_tag = card.select_one("a")
+        img_tag = card.select_one("img")
+
+        articles.append({
+            "title": link_tag.get_text(strip=True) if link_tag else None,
+            "image": img_tag["src"] if img_tag and img_tag.get("src") else None,
+            "link": (
+                AI_MAGAZINE_URL + link_tag["href"]
+                if link_tag and link_tag.get("href")
+                else None
+            ),
+            "source": "AI Magazine"
+        })
+
+    return articles
 
 
-container2 = soup2.find_all("div", class_="GridWrapper_flex__1NgfS GridWrapper_gutter-default__1hMKq")
-news2 = container2[1].find_all("div" , recursive=False)
-
-print(news2[0].find("a")["href"])
-
-for i in news2:
-    artical2.append({
-        "title" : i.find("a").get_text(),
-        "image" : i.find("img")["src"],
-        "link": "https://aimagazine.com"+i.find("a")["href"],
-    })
-
-
-[print (artical)for artical in artical2]
+if __name__ == "__main__":
+    for article in scrape_ai_magazine():
+        print(article)

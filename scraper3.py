@@ -1,28 +1,50 @@
 import requests
 from bs4 import BeautifulSoup
 
+TECHCRUNCH_AI_URL = "https://techcrunch.com/category/artificial-intelligence/"
 
-AI_news3 = "https://techcrunch.com/category/artificial-intelligence/"
+HEADERS = {
+    "User-Agent": "Mozilla/5.0"
+}
 
-artical3 = []
+def scrape_techcrunch_ai():
+    articles = []
 
-response3 = requests.get(AI_news3)
-html_response3 = response3.text
+    response = requests.get(TECHCRUNCH_AI_URL, headers=HEADERS)
+    if response.status_code != 200:
+        return articles
 
-soup3 = BeautifulSoup(html_response3, "html.parser")
+    soup = BeautifulSoup(response.text, "html.parser")
 
-container3 = soup3.find("ul" , class_="wp-block-post-template is-layout-flow wp-block-post-template-is-layout-flow")
-news3 = container3.find_all("li", recursive=False)
+    # Select article list items directly
+    news_cards = soup.select(
+        "ul.wp-block-post-template > li"
+    )
 
-print(news3[1].find("img")["src"])
+    for card in news_cards[:3]:
+        title_link = card.select_one("h3 a")
+        time_tag = card.select_one("time")
+        img_tag = card.select_one("img")
+
+        image_url = None
+        if img_tag:
+            image_url = (
+                img_tag.get("src")
+                or img_tag.get("data-src")
+                or img_tag.get("srcset", "").split(" ")[0]
+            )
+
+        articles.append({
+            "title": title_link.get_text(strip=True) if title_link else None,
+            "image": image_url,
+            "link": title_link["href"] if title_link and title_link.get("href") else None,
+            "date": time_tag.get_text(strip=True) if time_tag else None,
+            "source": "TechCrunch"
+        })
+
+    return articles
 
 
-for i in range(3):
-    artical3.append({
-    "title" : news3[i].select_one("h3>a").get_text(),
-    "image" : news3[i].find("img")["src"],
-    "link": news3[i].select_one("h3>a")["href"],
-    "date" : news3[i].find("time").get_text()
-    })
-
-[print (artical)for artical in artical3]
+if __name__ == "__main__":
+    for article in scrape_techcrunch_ai():
+        print(article)
