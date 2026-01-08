@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+{% for i in articles %}
+<ul>
+    <li>
+        <h3>{{ i.title }}</h3>
+
+        {% if i.image %}
+            <img src="{{ i.image }}" alt="article image">
+        {% endif %}
+
+        <p>
+            <a href="{{ i.link }}" target="_blank">
+                Read full article →
+            </a>
+        </p>
+
+        {% if i.date %}
+            <p><strong>Date:</strong> {{ i.date }}</p>
+        {% endif %}
+
+        {% if i.source %}
+            <p><em>Source: {{ i.source }}</em></p>
+        {% endif %}
+    </li>
+</ul>
+{% endfor %}
+
+</body>
+</html>

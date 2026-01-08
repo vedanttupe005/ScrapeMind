@@ -18,10 +18,10 @@ def scrape_ai_magazine():
 
     # Select article cards directly
     news_cards = soup.select(
-        "div.GridWrapper_flex__1NgfS > div"
+        "div.GridWrapper_flex__1NgfS.GridWrapper_gutter-default__1hMKq ", recursive=False
     )
 
-    for card in news_cards[:3]:
+    for card in news_cards[1]:
         link_tag = card.select_one("a")
         img_tag = card.select_one("img")
 
