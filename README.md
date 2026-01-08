@@ -144,5 +144,4 @@ All content belongs to its respective owners.
 **Vedant Tupe**
 Learning Flask, Web Scraping, and Backend Development 🚀
 
-```
 
