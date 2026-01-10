@@ -1,0 +1,65 @@
+{
+  "last_updated": "10 Jan 2026 02:01",
+  "articles": [
+    {
+      "title": "Datadog: How AI code reviews slash incident risk",
+      "image": "https://www.artificialintelligence-news.com/wp-content/uploads/2026/01/datadog-ai-code-review-development-coding-tools-openai-codex-artificial-intelligence-1024x768.jpg",
+      "link": "https://www.artificialintelligence-news.com/news/datadog-how-ai-code-reviews-slash-incident-risk/",
+      "date": "January 9, 2026",
+      "source": "Artificial Intelligence News"
+    },
+    {
+      "title": "From cloud to factory – humanoid robots coming to workplaces",
+      "image": "https://www.artificialintelligence-news.com/wp-content/uploads/2026/01/aeon-microsoft-partnership-hero_x1440-1024x576.webp",
+      "link": "https://www.artificialintelligence-news.com/news/from-cloud-to-factory-humanoid-robots-coming-to-workplaces/",
+      "date": "January 9, 2026",
+      "source": "Artificial Intelligence News"
+    },
+    {
+      "title": "“Dr AI, am I healthy?” 59% of Brits rely on AI for self-diagnosis",
+      "image": "https://www.artificialintelligence-news.com/wp-content/uploads/2026/01/self-diagnosis-hero_x1440-1024x683.webp",
+      "link": "https://www.artificialintelligence-news.com/news/dr-ai-am-i-healthy-59-of-brits-rely-on-ai-for-self-diagnosis/",
+      "date": "January 8, 2026",
+      "source": "Artificial Intelligence News"
+    },
+    {
+      "title": "This Week's Top Five Stories in AI",
+      "image": "https://assets.bizclikmedia.net/290/fc996a2f12f8ff8e56ca93d1289ab383:4c21ba7cbac0e4f8299eb62edb9fb499/nikesh.JPG",
+      "link": "https://aimagazine.com/news/top-five-stories-in-ai-jan-9",
+      "source": "AI Magazine"
+    },
+    {
+      "title": "Inside AMD's Yotta-Scale Roadmap for AI Infrastructure",
+      "image": "https://assets.bizclikmedia.net/290/89b6ef8a12906c15c381ce64a26e2139:a38ac3bbe267f0a9945e9b1a531e5460/lisa-su-ceo-advanced-micro-devices-amd.jpeg",
+      "link": "https://aimagazine.com/news/amd-outlines-yotta-scale-roadmap-for-ai-infrastructure",
+      "source": "AI Magazine"
+    },
+    {
+      "title": "Samsung Electronics: How Trust is Shaping the Future of AI",
+      "image": null,
+      "link": "https://aimagazine.com/news/samsung-future-of-ai-ces-2026",
+      "source": "AI Magazine"
+    },
+    {
+      "title": "CES 2026: Everything revealed, from Nvidia’s debuts to AMD’s new chips to Razer’s AI oddities",
+      "image": "https://techcrunch.com/wp-content/uploads/2026/01/GettyImages-2254217759.jpg?w=562",
+      "link": "https://techcrunch.com/2026/01/09/ces-2026-everything-revealed-from-nvidias-debuts-to-amds-new-chips-to-razers-ai-oddities/",
+      "date": "11 hours ago",
+      "source": "TechCrunch"
+    },
+    {
+      "title": "How the Sleepbuds maker, Ozlo, is building a platform for sleep data",
+      "image": "https://techcrunch.com/wp-content/uploads/2024/10/CMC_8086.jpg?w=563",
+      "link": "https://techcrunch.com/2026/01/09/how-the-sleepbuds-maker-ozlo-is-building-a-platform-for-sleep-data/",
+      "date": "14 hours ago",
+      "source": "TechCrunch"
+    },
+    {
+      "title": "CES 2026 was all about ‘physical AI’ and robots, robots, robots",
+      "image": "https://techcrunch.com/wp-content/uploads/2026/01/atlas-announcement.jpg?w=531",
+      "link": "https://techcrunch.com/podcast/ces-2026-was-all-about-physical-ai-and-robots-robots-robots/",
+      "date": "16 hours ago",
+      "source": "TechCrunch"
+    }
+  ]
+}

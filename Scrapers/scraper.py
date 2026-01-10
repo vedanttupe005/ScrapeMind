@@ -4,8 +4,11 @@ from bs4 import BeautifulSoup
 AI_NEWS_URL = "https://www.artificialintelligence-news.com/"
 
 HEADERS = {
-    "User-Agent": "Mozilla/5.0"
+    "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64)",
+    "Accept-Language": "en-US,en;q=0.9",
+    "Referer": "https://www.google.com/"
 }
+
 
 def scrape_ai_news():
     articles = []
