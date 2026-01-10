@@ -12,21 +12,51 @@
         rel="stylesheet"
     >
 
-    <!-- Basic custom styling -->
+    <!-- Custom Dark Theme -->
     <style>
         body {
-            background-color: #f4f6f8;
+            background: linear-gradient(180deg, #0d1117, #0b0f14);
+            color: #e6edf3;
+            font-family: "Segoe UI", system-ui, sans-serif;
         }
 
-        header {
-            background: #111;
-            color: white;
-            padding: 1.5rem 1rem;
-            text-align: center;
-        }
+      header {
+    background:
+        linear-gradient(
+            rgba(13, 17, 23, 0.85),
+            rgba(13, 17, 23, 0.95)
+        ),
+        url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSiZjbKootwU95uHRYbLAwCO4LZKk507brLsA&s");
+    background-size: cover;
+    background-position: center;
+    border-bottom: 1px solid #21262d;
+    padding: 3rem 1rem;
+    text-align: center;
+}
+
 
         header h1 {
-            margin-bottom: 0.3rem;
+            font-weight: 700;
+            letter-spacing: 0.5px;
+        }
+
+        header p {
+            color: #9da7b3;
+            font-size: 0.95rem;
+        }
+
+        /* CARD */
+        .article-card {
+            background: #161b22;
+            border: 1px solid #21262d;
+            border-radius: 14px;
+            overflow: hidden;
+            transition: transform 0.25s ease, box-shadow 0.25s ease;
+        }
+
+        .article-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.45);
         }
 
         .article-card img {
@@ -34,18 +64,50 @@
             object-fit: cover;
         }
 
-        footer {
-            background: #111;
-            color: #ccc;
-            text-align: center;
-            padding: 1rem;
-            margin-top: 3rem;
-            font-size: 0.9rem;
+        .card-body {
+            padding: 1.2rem;
+        }
+
+        .card-title {
+            font-size: 1.05rem;
+            font-weight: 600;
+            line-height: 1.4;
+        }
+
+        .card-title {
+            color: #e6edf3;
+        }
+
+        .text-muted {
+            color: #8b949e !important;
+            font-size: 0.85rem;
         }
 
         .source {
+            font-size: 0.8rem;
+            color: #7d8590;
+        }
+
+        /* BUTTON */
+        .btn-primary {
+            background: linear-gradient(135deg, #2f81f7, #1f6feb);
+            border: none;
             font-size: 0.85rem;
-            color: #666;
+        }
+
+        .btn-primary:hover {
+            background: linear-gradient(135deg, #1f6feb, #1158c7);
+        }
+
+        /* FOOTER */
+        footer {
+            border-top: 1px solid #21262d;
+            background: #0d1117;
+            color: #8b949e;
+            text-align: center;
+            padding: 1.2rem 1rem;
+            margin-top: 3rem;
+            font-size: 0.85rem;
         }
     </style>
 </head>
@@ -55,7 +117,18 @@
 <header>
     <h1>🤖 AI News Aggregator</h1>
     <p class="mb-0">Latest AI articles from trusted sources</p>
+    <p class="text-muted text-center mb-3">
+    Last updated: {{ last_updated or "Not updated yet" }}
+</p>
+
 </header>
+
+<div class="text-center mb-4">
+    <a href="/refresh" class="btn btn-outline-primary btn-sm">
+        🔄 Refresh Articles
+    </a>
+</div>
+
 
 <!-- MAIN CONTENT -->
 <main class="container my-4">
@@ -63,7 +136,7 @@
 
         {% for i in articles %}
         <div class="col-md-6 col-lg-4">
-            <div class="card h-100 shadow-sm article-card">
+            <div class="card h-100 article-card">
 
                 {% if i.image %}
                     <img src="{{ i.image }}" class="card-img-top" alt="article image">
@@ -82,7 +155,7 @@
 
                     <a href="{{ i.link }}"
                        target="_blank"
-                       class="btn btn-sm btn-primary mt-auto">
+                       class="btn btn-primary btn-sm mt-auto">
                         Read full article →
                     </a>
                 </div>
@@ -103,3 +176,4 @@
 
 </body>
 </html>
+

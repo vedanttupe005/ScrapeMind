@@ -1,24 +1,23 @@
-
-
-````md
 # 🤖 ScrapeMind – AI News Aggregator
 
-ScrapeMind is a simple AI news aggregation web application built using **Python, Flask, and BeautifulSoup**.  
-It scrapes the latest Artificial Intelligence–related articles from multiple public websites and displays them on a single, clean web page.
+ScrapeMind is a Python-based AI news aggregation web application built using **Flask and BeautifulSoup**.  
+It collects the latest Artificial Intelligence–related articles from multiple public sources, stores them in a local JSON file, and displays them on a clean, responsive web interface.
 
-This project was built for **learning purposes** to understand web scraping, Flask routing, and frontend rendering with Jinja templates.
+This project was built for **learning and demonstration purposes**, focusing on web scraping, backend architecture, and Flask-based rendering.
 
 ---
 
 ## 🚀 Features
 
-- Scrapes AI-related news from multiple sources
-- Aggregates articles into a single feed
+- Scrapes AI-related news from multiple public sources
+- Aggregates articles into a single unified feed
+- Stores scraped data in a JSON file (persistent storage)
+- Overwrites old data on refresh to keep content up to date
 - Displays title, image, source, and date (if available)
-- Handles missing data safely (e.g., articles without dates)
-- Uses Flask + Jinja for dynamic rendering
-- Clean and responsive UI using Bootstrap
-- Fresh data fetched on page refresh
+- Handles missing or optional data safely
+- Clean, dark-themed UI using Bootstrap
+- Manual refresh route to control scraping frequency
+- Fast page loads (scraping decoupled from rendering)
 
 ---
 
@@ -28,7 +27,7 @@ This project was built for **learning purposes** to understand web scraping, Fla
 - AI Magazine  
 - TechCrunch (AI category)
 
-> All data is publicly available and scraped for educational use only.
+> All data is publicly available and used strictly for educational purposes.
 
 ---
 
@@ -40,6 +39,7 @@ This project was built for **learning purposes** to understand web scraping, Fla
 - **Requests**
 - **Bootstrap 5**
 - HTML + CSS
+- JSON (for data storage)
 
 ---
 
@@ -49,31 +49,42 @@ This project was built for **learning purposes** to understand web scraping, Fla
 ScrapeMind/
 │
 ├── app.py
+├── articles.json            # Stored scraped articles (auto-generated)
+│
 ├── Scrapers/
-│   ├── scraper.py          # ArtificialIntelligence-News scraper
-│   ├── scraper2.py         # AI Magazine scraper
-│   ├── scraper3.py         # TechCrunch AI scraper
+│   ├── scraper.py           # ArtificialIntelligence-News scraper
+│   ├── scraper2.py          # AI Magazine scraper
+│   ├── scraper3.py          # TechCrunch AI scraper
 │
 ├── templates/
 │   └── index.html
 │
-├── static/                 # (optional for future CSS/JS)
+├── static/                  # Optional (CSS / assets)
 ├── .gitignore
 ├── README.md
-````
+```
 
 ---
 
 ## ⚙️ How It Works
 
-1. Flask runs a single route (`/`)
-2. On each page request:
+1. Scraper functions collect articles from multiple sources.
+2. On calling the `/refresh` route:
+   - All scrapers run
+   - Latest articles are aggregated
+   - Existing `articles.json` file is **overwritten** with fresh data
+3. The home route (`/`) reads data from `articles.json`
+4. Articles are rendered using Flask + Jinja templates
+5. Page refresh **does not trigger scraping**, ensuring better performance and safety
 
-   * All scraper functions are called
-   * Latest articles are fetched
-   * Data is combined into a single list
-3. Articles are rendered using Jinja templates
-4. Page refresh triggers a fresh scrape
+---
+
+## 🔄 Routes
+
+- `/` → Displays articles from the stored JSON file  
+- `/refresh` → Re-runs all scrapers and overwrites the JSON data
+
+This separation avoids unnecessary scraping on every page reload.
 
 ---
 
@@ -86,7 +97,7 @@ git clone https://github.com/vedanttupe005/ScrapeMind.git
 cd ScrapeMind
 ```
 
-2. Create and activate a virtual environment (optional but recommended):
+2. (Optional) Create and activate a virtual environment:
 
 ```bash
 python -m venv .venv
@@ -111,37 +122,45 @@ python app.py
 http://127.0.0.1:5000/
 ```
 
+6. To fetch fresh articles, visit:
+
+```
+http://127.0.0.1:5000/refresh
+```
+
 ---
 
 ## ⚠️ Notes & Limitations
 
-* This project scrapes live websites; layout changes may break scrapers.
-* Scraping happens on page refresh (no caching yet).
-* Not intended for production use.
-* No authentication or rate limiting implemented.
+- This project scrapes live websites; layout changes may break scrapers.
+- Scraping is manual to avoid excessive requests.
+- No authentication or rate limiting implemented.
+- Not intended for production use.
 
 ---
 
 ## 📌 Future Improvements
 
-* Add caching to reduce repeated scraping
-* Add source-based filtering
-* Sort articles by date
-* Add REST API endpoint
-* Improve error handling and logging
+- Replace JSON storage with SQLite or PostgreSQL
+- Add automatic scheduled scraping
+- Add source-based filtering
+- Sort articles by date
+- Add REST API endpoints
+- Improve logging and error handling
 
 ---
 
 ## 📜 Disclaimer
 
-This project is created **strictly for educational purposes**.
+This project is created **strictly for educational purposes**.  
 All content belongs to its respective owners.
 
 ---
 
 ## 👨‍💻 Author
 
-**Vedant Tupe**
+**Vedant Tupe**  
+Final-year diploma student | Project-driven developer  
 Learning Flask, Web Scraping, and Backend Development 🚀
 
 
