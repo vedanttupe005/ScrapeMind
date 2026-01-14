@@ -21,7 +21,7 @@ def scrape_ai_magazine():
         "div.GridWrapper_flex__1NgfS.GridWrapper_gutter-default__1hMKq ", recursive=False
     )
 
-    for card in news_cards[1]:
+    for card in news_cards[2]:
         link_tag = card.select_one("a")
         img_tag = card.select_one("img")
 

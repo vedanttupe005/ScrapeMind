@@ -1,64 +1,61 @@
 {
-  "last_updated": "10 Jan 2026 02:31",
+  "last_updated": "14 Jan 2026 03:59",
   "articles": [
     {
-      "title": "Datadog: How AI code reviews slash incident risk",
-      "image": "https://www.artificialintelligence-news.com/wp-content/uploads/2026/01/datadog-ai-code-review-development-coding-tools-openai-codex-artificial-intelligence-1024x768.jpg",
-      "link": "https://www.artificialintelligence-news.com/news/datadog-how-ai-code-reviews-slash-incident-risk/",
-      "date": "January 9, 2026",
-      "source": "Artificial Intelligence News"
+      "title": "NVIDIA Cosmos Reason 2 Brings Advanced Reasoning To Physical AI",
+      "image": "https://cdn-uploads.huggingface.co/production/uploads/63b738acbd2d1535227daa4c/7B01Lxy_IS-2FaPGUKJiA.png",
+      "link": "https://huggingface.co/blog/blog/nvidia/nvidia-cosmos-reason-2-brings-advanced-reasoning",
+      "source": "Hugging Face Blog"
     },
     {
-      "title": "From cloud to factory – humanoid robots coming to workplaces",
-      "image": "https://www.artificialintelligence-news.com/wp-content/uploads/2026/01/aeon-microsoft-partnership-hero_x1440-1024x576.webp",
-      "link": "https://www.artificialintelligence-news.com/news/from-cloud-to-factory-humanoid-robots-coming-to-workplaces/",
-      "date": "January 9, 2026",
-      "source": "Artificial Intelligence News"
+      "title": "Introducing Falcon-H1-Arabic: Pushing the Boundaries of Arabic Language AI with Hybrid Architecture",
+      "image": "https://cdn-avatars.huggingface.co/v1/production/uploads/61a8d1aac664736898ffc84f/AT6cAB5ZNwCcqFMal71WD.jpeg",
+      "link": "https://huggingface.co/blog/blog/tiiuae/falcon-h1-arabic",
+      "source": "Hugging Face Blog"
     },
     {
-      "title": "“Dr AI, am I healthy?” 59% of Brits rely on AI for self-diagnosis",
-      "image": "https://www.artificialintelligence-news.com/wp-content/uploads/2026/01/self-diagnosis-hero_x1440-1024x683.webp",
-      "link": "https://www.artificialintelligence-news.com/news/dr-ai-am-i-healthy-59-of-brits-rely-on-ai-for-self-diagnosis/",
-      "date": "January 8, 2026",
-      "source": "Artificial Intelligence News"
+      "title": "NVIDIA brings agents to life with DGX Spark and Reachy Mini",
+      "image": "https://huggingface.co/blog/assets/nvidia-reachy-mini/new_thumbnail.png",
+      "link": "https://huggingface.co/blog/blog/nvidia-reachy-mini",
+      "source": "Hugging Face Blog"
     },
     {
-      "title": "This Week's Top Five Stories in AI",
-      "image": "https://assets.bizclikmedia.net/290/fc996a2f12f8ff8e56ca93d1289ab383:4c21ba7cbac0e4f8299eb62edb9fb499/nikesh.JPG",
-      "link": "https://aimagazine.com/news/top-five-stories-in-ai-jan-9",
+      "title": "Cera's AI Agents set to Transform Healthcare",
+      "image": "https://assets.bizclikmedia.net/290/da90d34daf474e704ba88eafb45a61cd:26d021eb61d97406aa965170d21b15d4/dr-ben.jpg",
+      "link": "https://aimagazine.com/news/ai-agents-transform-healthcare-as-cera-deploys-1-000",
       "source": "AI Magazine"
     },
     {
-      "title": "Inside AMD's Yotta-Scale Roadmap for AI Infrastructure",
-      "image": "https://assets.bizclikmedia.net/290/89b6ef8a12906c15c381ce64a26e2139:a38ac3bbe267f0a9945e9b1a531e5460/lisa-su-ceo-advanced-micro-devices-amd.jpeg",
-      "link": "https://aimagazine.com/news/amd-outlines-yotta-scale-roadmap-for-ai-infrastructure",
+      "title": "BMW iX3 Establishes New Benchmark for In-Vehicle AI",
+      "image": "https://assets.bizclikmedia.net/290/f63df455c6ecec1f3fe5e994e653d608:27d57e71d64c9a8251a1774a90284d89/p90627671-highres-bmw-at-ces-2026.jpg",
+      "link": "https://aimagazine.com/news/bmw-unveils-generative-ai-assistant-for-ix3-electric-vehicle",
       "source": "AI Magazine"
     },
     {
-      "title": "Samsung Electronics: How Trust is Shaping the Future of AI",
-      "image": "https://assets.bizclikmedia.net/290/8eb73df0089423223f9b6ac96882ef4f:53c06ab355f5205c5e1972dca9bf38b5/samsung-at-ces-2.jpg",
-      "link": "https://aimagazine.com/news/samsung-future-of-ai-ces-2026",
+      "title": "How Anthropic's Claude Cowork AI Does Your Work For You",
+      "image": "https://assets.bizclikmedia.net/290/02710cba96bb5ebe428cb3bc4396db9f:3c71aa7807a7f255337b2d20350de1e1/1585595357803-e-1765411200-v-beta-t-7rvrbmqmfuqwkwhdvmxdp8rkbthqadejxm63pfqvhmi",
+      "link": "https://aimagazine.com/news/how-anthropic-claude-cowork-ai-does-your-work-for-you",
       "source": "AI Magazine"
     },
     {
-      "title": "CES 2026: Everything revealed, from Nvidia’s debuts to AMD’s new chips to Razer’s AI oddities",
-      "image": "https://techcrunch.com/wp-content/uploads/2026/01/GettyImages-2254217759.jpg?w=562",
-      "link": "https://techcrunch.com/2026/01/09/ces-2026-everything-revealed-from-nvidias-debuts-to-amds-new-chips-to-razers-ai-oddities/",
-      "date": "12 hours ago",
-      "source": "TechCrunch"
-    },
-    {
-      "title": "How the Sleepbuds maker, Ozlo, is building a platform for sleep data",
-      "image": "https://techcrunch.com/wp-content/uploads/2024/10/CMC_8086.jpg?w=563",
-      "link": "https://techcrunch.com/2026/01/09/how-the-sleepbuds-maker-ozlo-is-building-a-platform-for-sleep-data/",
+      "title": "Microsoft announces glut of new data centers but says it won’t let your electricity bill go up",
+      "image": "https://techcrunch.com/wp-content/uploads/2025/07/microsoft-store-1185699758.jpg?w=563",
+      "link": "https://techcrunch.com/2026/01/13/microsoft-announces-glut-of-new-data-centers-but-says-it-wont-let-your-electricity-bill-go-up/",
       "date": "15 hours ago",
       "source": "TechCrunch"
     },
     {
-      "title": "CES 2026 was all about ‘physical AI’ and robots, robots, robots",
-      "image": "https://techcrunch.com/wp-content/uploads/2026/01/atlas-announcement.jpg?w=531",
-      "link": "https://techcrunch.com/podcast/ces-2026-was-all-about-physical-ai-and-robots-robots-robots/",
+      "title": "A consumer watchdog issued a warning about Google’s AI agent shopping protocol — Google says she’s wrong",
+      "image": "https://techcrunch.com/wp-content/uploads/2024/05/GettyImages-1354022389.jpg?w=571",
+      "link": "https://techcrunch.com/2026/01/13/a-consumer-watchdog-issued-a-warning-about-googles-ai-agent-shopping-protocol-google-says-shes-wrong/",
       "date": "16 hours ago",
+      "source": "TechCrunch"
+    },
+    {
+      "title": "Ring founder details the camera company’s ‘intelligent assistant’ era",
+      "image": "https://techcrunch.com/wp-content/uploads/2026/01/jamie-siminoff-GettyImages-2237943588.jpg?w=563",
+      "link": "https://techcrunch.com/2026/01/13/ring-founder-details-the-camera-companys-intelligent-assistant-era/",
+      "date": "17 hours ago",
       "source": "TechCrunch"
     }
   ]

@@ -1,7 +1,7 @@
 import requests
 from bs4 import BeautifulSoup
 
-AI_NEWS_URL = "https://www.artificialintelligence-news.com/"
+AI_NEWS_URL = "https://huggingface.co/blog"
 
 HEADERS = {
     "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64)",
@@ -21,21 +21,26 @@ def scrape_ai_news():
 
     # Select all article cards directly (no indexing hacks)
     news_cards = soup.select(
-        "div.elementor-loop-container[role='list'] > div"
+        "div.flex.flex-col.gap-6 a"
     )
 
+
     for card in news_cards[:3]:
-        title_tag = card.select_one("h1")
-        img_tag = card.select_one("img")
-        link_tag = card.select_one("a")
-        p_tags = card.select("p")
+        title_tag = card.select_one("h2")
+        link_tag = card
+        # p_tags = card.select("span")
+
+        img_src = card.select_one("img")["src"] if card.select_one("img") else None
+        if img_src and img_src.startswith("/"):
+            img_src = "https://huggingface.co" + img_src
+
 
         articles.append({
             "title": title_tag.get_text(strip=True) if title_tag else None,
-            "image": img_tag["src"] if img_tag and img_tag.get("src") else None,
-            "link": link_tag["href"] if link_tag and link_tag.get("href") else None,
-            "date": p_tags[1].get_text(strip=True) if len(p_tags) > 1 else None,
-            "source": "Artificial Intelligence News"
+            "image": img_src,
+            "link": AI_NEWS_URL+link_tag["href"] if link_tag and link_tag.get("href") else None,
+            # "date": p_tags[0].get_text(strip=True) if len(p_tags) > 1 else None,
+            "source": "Hugging Face Blog"
         })
 
     return articles
