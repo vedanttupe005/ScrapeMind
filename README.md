@@ -23,7 +23,7 @@ This project was built for **learning and demonstration purposes**, focusing on 
 
 ## 📰 Sources Scraped
 
-- ArtificialIntelligence-News  
+- Hugging Face blog  
 - AI Magazine  
 - TechCrunch (AI category)
 
